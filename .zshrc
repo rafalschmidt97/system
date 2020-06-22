@@ -141,3 +141,5 @@ alias openchrome="open -a \"Google Chrome\" $1"
 # Java
 alias javalist="/usr/libexec/java_home -V"
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.8.0_251.jdk/Contents/Home"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
