@@ -69,6 +69,10 @@ Plug 'vim-airline/vim-airline' " Tab line
 Plug 'Valloric/YouCompleteMe', { 'do': 'python3 install.py --all' }"
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'airblade/vim-gitgutter'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
 
 call plug#end()
 
