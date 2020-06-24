@@ -38,8 +38,8 @@ set shell=/bin/zsh
 " Tree
 nnoremap <leader>1 :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
 let g:netrw_liststyle = 3 "Show directories"
-" let g:netrw_browse_split = 4 "Previous window"
-let g:netrw_browse_split = 0 "Replace content"
+let g:netrw_browse_split = 4 "Previous window"
+" let g:netrw_browse_split = 0 "Replace content"
 let g:netrw_altv = 1
 let g:vrfr_rg = 'true'
 let g:netrw_banner = 0
