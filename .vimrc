@@ -43,7 +43,7 @@ let g:netrw_banner = 0
 let g:netrw_winsize = 25
 
 " Window
-nnoremap <leader>t :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
+nnoremap <leader>r :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
 nnoremap <leader>h :wincmd h<CR>
 nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
@@ -52,6 +52,12 @@ nnoremap <Leader>= :vertical resize +10<CR>
 nnoremap <Leader>- :vertical resize -10<CR>
 nnoremap <Leader>+ :resize +10<CR>
 nnoremap <Leader>_ :resize -10<CR>
+nnoremap <leader>t :tabnew<CR>
+nnoremap <leader>] :tabnext<CR>
+nnoremap <leader>[ :tabprevious<CR>
+nnoremap <leader>v :vs<CR>
+nnoremap <leader>h :sv<CR>
+
 
 " Keymaps 
 
@@ -114,5 +120,5 @@ nnoremap <silent> <leader>gd :YcmCompleter GoTo<CR>
 nnoremap <silent> <leader>gf :YcmCompleter FixIt<CR>
 
 " Finder
-nnoremap <leader>ff :GFiles<CR>
-nnoremap <leader>fz :Files<CR>
+nnoremap <leader>f :Files<CR>
+nnoremap <leader>af :GFiles<CR>
