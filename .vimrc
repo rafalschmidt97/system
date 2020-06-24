@@ -36,14 +36,19 @@ set hidden " Hide files instead of closing them
 set shell=/bin/zsh
 
 " Tree
-let g:netrw_liststyle = 3
-let g:netrw_browse_split = 2
+nnoremap <leader>1 :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
+let g:netrw_liststyle = 3 "Show directories"
+let g:netrw_browse_split = 4 "Previous window"
+let g:netrw_altv = 1
 let g:vrfr_rg = 'true'
 let g:netrw_banner = 0
 let g:netrw_winsize = 25
+let g:netrw_keepdir = 0
+set autochdir
 
 " Window
-nnoremap <leader>r :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
+nnoremap <leader><Esc> <C-w>o
+nnoremap <leader>w :q<CR>
 nnoremap <leader>h :wincmd h<CR>
 nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
@@ -56,14 +61,17 @@ nnoremap <leader>t :tabnew<CR>
 nnoremap <leader>] :tabnext<CR>
 nnoremap <leader>[ :tabprevious<CR>
 nnoremap <leader>v :vs<CR>
-nnoremap <leader>h :sv<CR>
-
+nnoremap <leader>s :sv<CR>
 
 " Keymaps 
 
 " Allow to use tabs
 vnoremap <Tab> >
 vnoremap <S-Tab> <
+
+" Natural searching
+nnoremap <leader><S-f> :%s//g<Left><Left>
+nnoremap <leader>f /
 
 " Plugins
 call plug#begin('~/.vim/plugged') " Use plugs as a plugin manager
@@ -118,7 +126,11 @@ set termguicolors " Fix colors in terminal
 "2. YouCompleteMe
 nnoremap <silent> <leader>gd :YcmCompleter GoTo<CR>
 nnoremap <silent> <leader>gf :YcmCompleter FixIt<CR>
+let g:ycm_key_detailed_diagnostics = '<leader>gi'
 
 " Finder
-nnoremap <leader>f :Files<CR>
-nnoremap <leader>af :GFiles<CR>
+nnoremap <leader>o :Files<CR>
+nnoremap <leader><S-o> :GFiles<CR>
+
+" Git
+let g:gitgutter_map_keys = 0
