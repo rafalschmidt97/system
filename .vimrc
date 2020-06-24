@@ -38,7 +38,8 @@ set shell=/bin/zsh
 " Tree
 nnoremap <leader>1 :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
 let g:netrw_liststyle = 3 "Show directories"
-let g:netrw_browse_split = 4 "Previous window"
+" let g:netrw_browse_split = 4 "Previous window"
+let g:netrw_browse_split = 0 "Replace content"
 let g:netrw_altv = 1
 let g:vrfr_rg = 'true'
 let g:netrw_banner = 0
@@ -58,10 +59,12 @@ nnoremap <Leader>- :vertical resize -10<CR>
 nnoremap <Leader>+ :resize +10<CR>
 nnoremap <Leader>_ :resize -10<CR>
 nnoremap <leader>t :tabnew<CR>
+nnoremap <leader><S-t> <C-W>T
 nnoremap <leader>] :tabnext<CR>
 nnoremap <leader>[ :tabprevious<CR>
-nnoremap <leader>v :vs<CR>
-nnoremap <leader>s :sv<CR>
+nnoremap <leader>vv :vs<CR>
+nnoremap <leader>vh :sv<CR>
+nnoremap <leader><S-w> <C-w>o
 
 " Keymaps 
 
@@ -72,6 +75,10 @@ vnoremap <S-Tab> <
 " Natural searching
 nnoremap <leader><S-f> :%s//g<Left><Left>
 nnoremap <leader>f /
+
+" Session
+nnoremap <leader>s :mksession!<CR>
+nnoremap <leader><S-s> :source Session.vim<CR>
 
 " Plugins
 call plug#begin('~/.vim/plugged') " Use plugs as a plugin manager
@@ -130,6 +137,7 @@ let g:ycm_key_detailed_diagnostics = '<leader>gi'
 
 " Finder
 nnoremap <leader>o :Files<CR>
+nnoremap <leader><C-o> :tabnew:<CR>:Files<CR>
 nnoremap <leader><S-o> :GFiles<CR>
 
 " Git
